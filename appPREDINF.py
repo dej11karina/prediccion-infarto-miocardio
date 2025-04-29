@@ -63,7 +63,7 @@ st.subheader("📝 Datos del paciente")
 
 age = st.number_input("Edad en años completos", min_value=0.0, step=1.0, format="%.0f")
 ckmb = st.number_input("CK-MB Nota: Los valores normales suelen ser menos de 5 ng/mL ", min_value=0.0, step=0.0001, format="%.4f")
-troponin = st.number_input("Troponina Nota: Los valores normales de CK-MB suelen ser menos de 5 ng/mL", min_value=0.0, step=0.0001, format="%.4f")
+troponin = st.number_input("Troponina Nota: Los valores normales son por debajo de 0.04 ng/ml", min_value=0.0, step=0.0001, format="%.4f")
 input_data = pd.DataFrame([[age, ckmb, troponin]], columns=["Age", "CK-MB", "Troponin"])
 input_scaled = scaler.transform(input_data)
 
